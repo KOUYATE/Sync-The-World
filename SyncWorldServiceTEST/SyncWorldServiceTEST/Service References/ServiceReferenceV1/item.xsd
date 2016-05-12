@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncWorldDAO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncWorldDAO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PersonSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContributionSets" nillable="true" type="tns:ArrayOfContributionSet" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventSets" nillable="true" type="tns:ArrayOfEventSet" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonSet" nillable="true" type="tns:PersonSet" />
+  <xs:complexType name="ArrayOfContributionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContributionSet" nillable="true" type="tns:ContributionSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContributionSet" nillable="true" type="tns:ArrayOfContributionSet" />
+  <xs:complexType name="ContributionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContributionId" type="xs:int" />
+      <xs:element minOccurs="0" name="EventEventId" type="xs:int" />
+      <xs:element minOccurs="0" name="EventSet" nillable="true" type="tns:EventSet" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPersonId" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonSet" nillable="true" type="tns:PersonSet" />
+      <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContributionSet" nillable="true" type="tns:ContributionSet" />
+  <xs:complexType name="EventSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdressSet" nillable="true" type="tns:AdressSet" />
+      <xs:element minOccurs="0" name="Adress_AdressId" type="xs:int" />
+      <xs:element minOccurs="0" name="ContributionSets" nillable="true" type="tns:ArrayOfContributionSet" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonPersonId" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonSets" nillable="true" type="tns:ArrayOfPersonSet" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventSet" nillable="true" type="tns:EventSet" />
+  <xs:complexType name="AdressSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdressId" type="xs:int" />
+      <xs:element minOccurs="0" name="EventSets" nillable="true" type="tns:ArrayOfEventSet" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdressSet" nillable="true" type="tns:AdressSet" />
+  <xs:complexType name="ArrayOfEventSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventSet" nillable="true" type="tns:EventSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventSet" nillable="true" type="tns:ArrayOfEventSet" />
+  <xs:complexType name="ArrayOfPersonSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonSet" nillable="true" type="tns:PersonSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonSet" nillable="true" type="tns:ArrayOfPersonSet" />
+</xs:schema>

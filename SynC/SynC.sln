@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncService", "SyncService\SyncService.csproj", "{6DB7860C-80AE-422E-BD6F-24667634B81E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncServiceHost", "SyncServiceHost\SyncServiceHost.csproj", "{D107D06D-A3E3-48E1-8BF7-904B80A771CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncServiceDAO", "SyncServiceDAO\SyncServiceDAO.csproj", "{9F4CA5BF-515D-40B5-85C5-F3FF2F37A0DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DB7860C-80AE-422E-BD6F-24667634B81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB7860C-80AE-422E-BD6F-24667634B81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB7860C-80AE-422E-BD6F-24667634B81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB7860C-80AE-422E-BD6F-24667634B81E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D107D06D-A3E3-48E1-8BF7-904B80A771CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D107D06D-A3E3-48E1-8BF7-904B80A771CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D107D06D-A3E3-48E1-8BF7-904B80A771CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D107D06D-A3E3-48E1-8BF7-904B80A771CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4CA5BF-515D-40B5-85C5-F3FF2F37A0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4CA5BF-515D-40B5-85C5-F3FF2F37A0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4CA5BF-515D-40B5-85C5-F3FF2F37A0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4CA5BF-515D-40B5-85C5-F3FF2F37A0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

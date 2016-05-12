@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SyncWolrdService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncWorldDAO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISyncWolrdService_AddPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPerson" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePerson" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeletePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePerson" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeletePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdateEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdateEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_EventExistByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventExistByName" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_EventExistByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventExistByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_EventExistByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventExistByDate" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_EventExistByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventExistByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetEventBetweenDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventBetweenDate" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetEventBetweenDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventBetweenDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteAllClosedEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllClosedEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteAllClosedEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllClosedEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdateAllEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAllEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdateAllEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAllEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddPersonToEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonToEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddPersonToEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonToEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetAllEventForPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEventForPerson" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetAllEventForPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEventForPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetAllContribForEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContribForEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetAllContribForEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContribForEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetAllContribForPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContribForPerson" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_GetAllContribForPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContribForPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteAllContribForPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllContribForPerson" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteAllContribForPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllContribForPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddContrib_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContrib" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_AddContrib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContribResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdateContrib_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContrib" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_UpdateContrib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContribResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteContrib_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContrib" />
+  </wsdl:message>
+  <wsdl:message name="ISyncWolrdService_DeleteContrib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContribResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISyncWolrdService">
+    <wsdl:operation name="AddPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/AddPerson" message="tns:ISyncWolrdService_AddPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/AddPersonResponse" message="tns:ISyncWolrdService_AddPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdatePerson" message="tns:ISyncWolrdService_UpdatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdatePersonResponse" message="tns:ISyncWolrdService_UpdatePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/DeletePerson" message="tns:ISyncWolrdService_DeletePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/DeletePersonResponse" message="tns:ISyncWolrdService_DeletePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/AddEvent" message="tns:ISyncWolrdService_AddEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/AddEventResponse" message="tns:ISyncWolrdService_AddEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdateEvent" message="tns:ISyncWolrdService_UpdateEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdateEventResponse" message="tns:ISyncWolrdService_UpdateEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteEvent" message="tns:ISyncWolrdService_DeleteEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteEventResponse" message="tns:ISyncWolrdService_DeleteEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventExistByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/EventExistByName" message="tns:ISyncWolrdService_EventExistByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/EventExistByNameResponse" message="tns:ISyncWolrdService_EventExistByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventExistByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/EventExistByDate" message="tns:ISyncWolrdService_EventExistByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/EventExistByDateResponse" message="tns:ISyncWolrdService_EventExistByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventBetweenDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/GetEventBetweenDate" message="tns:ISyncWolrdService_GetEventBetweenDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/GetEventBetweenDateResponse" message="tns:ISyncWolrdService_GetEventBetweenDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllClosedEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteAllClosedEvent" message="tns:ISyncWolrdService_DeleteAllClosedEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteAllClosedEventResponse" message="tns:ISyncWolrdService_DeleteAllClosedEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdateAllEvent" message="tns:ISyncWolrdService_UpdateAllEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdateAllEventResponse" message="tns:ISyncWolrdService_UpdateAllEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonToEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/AddPersonToEvent" message="tns:ISyncWolrdService_AddPersonToEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/AddPersonToEventResponse" message="tns:ISyncWolrdService_AddPersonToEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEventForPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/GetAllEventForPerson" message="tns:ISyncWolrdService_GetAllEventForPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/GetAllEventForPersonResponse" message="tns:ISyncWolrdService_GetAllEventForPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContribForEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/GetAllContribForEvent" message="tns:ISyncWolrdService_GetAllContribForEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/GetAllContribForEventResponse" message="tns:ISyncWolrdService_GetAllContribForEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContribForPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/GetAllContribForPerson" message="tns:ISyncWolrdService_GetAllContribForPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/GetAllContribForPersonResponse" message="tns:ISyncWolrdService_GetAllContribForPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllContribForPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteAllContribForPerson" message="tns:ISyncWolrdService_DeleteAllContribForPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteAllContribForPersonResponse" message="tns:ISyncWolrdService_DeleteAllContribForPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContrib">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/AddContrib" message="tns:ISyncWolrdService_AddContrib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/AddContribResponse" message="tns:ISyncWolrdService_AddContrib_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContrib">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdateContrib" message="tns:ISyncWolrdService_UpdateContrib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/UpdateContribResponse" message="tns:ISyncWolrdService_UpdateContrib_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContrib">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteContrib" message="tns:ISyncWolrdService_DeleteContrib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncWolrdService/DeleteContribResponse" message="tns:ISyncWolrdService_DeleteContrib_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISyncWolrdService" type="tns:ISyncWolrdService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddPerson">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/AddPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/UpdatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/DeletePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/AddEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/UpdateEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/DeleteEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventExistByName">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/EventExistByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventExistByDate">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/EventExistByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventBetweenDate">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/GetEventBetweenDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllClosedEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/DeleteAllClosedEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/UpdateAllEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonToEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/AddPersonToEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEventForPerson">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/GetAllEventForPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContribForEvent">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/GetAllContribForEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContribForPerson">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/GetAllContribForPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllContribForPerson">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/DeleteAllContribForPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContrib">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/AddContrib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContrib">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/UpdateContrib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContrib">
+      <soap:operation soapAction="http://tempuri.org/ISyncWolrdService/DeleteContrib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncWolrdService">
+    <wsdl:port name="BasicHttpBinding_ISyncWolrdService" binding="tns:BasicHttpBinding_ISyncWolrdService">
+      <soap:address location="http://localhost:8080/ServicePerson" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
