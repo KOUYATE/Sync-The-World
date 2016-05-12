@@ -11,3 +11,8 @@ Application d'organisation d’événement en C#. Cette application orientée We
 <li>Récupérer la liste d'évenement par status ou par type d'évenement</li>
 <li>Supprimer tous les évenements cloturés</li>
 <li>Mettre à jour le status des évenements en cours à ouvert</li>
+<li>Ajouter des personnes (Utilisateurs) à des évenements ouvert</li>
+<li>Récupérer les participants d'un évenement</li>
+<li>Récupérer les contributions d'un évenement</li>
+<li>Récupérer les contributions d'une personne pour tous les évenements</li>
+<li>Supprimer les contribution d'une personne pour tous les évenements ouverts</li>
